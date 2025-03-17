@@ -1,15 +1,15 @@
 
 import './App.css'
-import { Button } from './components/ui/button'
+
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   
 
   return (
-    <div>
-      toto
-      <Button variant="destructive">add</Button>
-    </div>
+    <BrowserRouter>
+    </BrowserRouter>
+
   )
 }
 
