@@ -7,7 +7,11 @@ const Layout = ({children}: PropsWithChildren) => {
         <main className='min-h-screen container mx-auto px-4 py-8'>
             {children}
         </main>
-        footer
+        <footer>
+          <div>
+            <p>Made by MoonSpark</p>
+          </div>
+        </footer>
     </div>
   )
 }
