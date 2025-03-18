@@ -7,8 +7,8 @@ const Layout = ({children}: PropsWithChildren) => {
         <main className='min-h-screen container mx-auto px-4 py-8'>
             {children}
         </main>
-        <footer>
-          <div>
+        <footer className='border-t backdrop-blur py-4'>
+          <div className='container mx-auto px-4 text-center text-gray-400'>
             <p>Made by MoonSpark</p>
           </div>
         </footer>
