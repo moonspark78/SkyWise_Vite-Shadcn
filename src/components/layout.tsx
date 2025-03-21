@@ -14,6 +14,7 @@ const Layout = ({children}: PropsWithChildren) => {
           </div>
         </footer>
     </div>
+    
   )
 }
 
