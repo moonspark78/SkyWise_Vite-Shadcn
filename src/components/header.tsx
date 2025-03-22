@@ -19,7 +19,13 @@ const Header = () => {
         <div>
           {/* search */}
           {/* toggle */}
-          <div onClick={() => setTheme(isDark ? "light" : "dark")}>toggle</div>
+          <div 
+            onClick={() => setTheme(isDark ? "light" : "dark")}
+            className={`flex items-center cursor-pointer transition-transform duration-500 
+              ${isDark ? "rotate-80" : "rotate-0"}`}
+          >
+
+          </div>
         </div>
       </div>
     </header>
