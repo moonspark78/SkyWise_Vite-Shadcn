@@ -4,5 +4,9 @@ class WeatherAPI{
     private fetchData() {};
 
     async getCurrentWeather() {}
+
+    async getForecast() {}
+
     
+
 }
