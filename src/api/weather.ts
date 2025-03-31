@@ -7,6 +7,6 @@ class WeatherAPI{
 
     async getForecast() {}
 
-    
+    async reverseGeocode() {}
 
 }
