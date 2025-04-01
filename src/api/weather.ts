@@ -6,10 +6,16 @@ class WeatherAPI{
             appid: API_CONFIG.API_KEY,
             ...params
         })
-        return `${endpoint}`
+        return `${endpoint}?${searchParams.toString()}`
     };
 
-    private fetchData() {};
+    private async fetchData<T>(url: string): Promise<T> {
+        const response = await fetch(url)
+        if (!response.ok) {
+            throw new Error(`Error fetching data: ${response.statusText}`)
+        }
+        return response.json()
+    };
 
     async getCurrentWeather() {}
 
