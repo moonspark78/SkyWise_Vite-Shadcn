@@ -1,5 +1,7 @@
 class WeatherAPI{
-    private createUrl() {};
+    private createUrl(endpoint: string,params: Record<string,string | number>) {
+        return `${endpoint}`
+    };
 
     private fetchData() {};
 
