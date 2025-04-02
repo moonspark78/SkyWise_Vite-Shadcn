@@ -9,6 +9,9 @@ class WeatherAPI{
         return `${endpoint}?${searchParams.toString()}`
     };
 
+    //delete this
+    private loadr(){}
+
     private async fetchData<T>(url: string): Promise<T> {
         const response = await fetch(url)
         if (!response.ok) {
