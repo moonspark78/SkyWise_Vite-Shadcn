@@ -1,4 +1,5 @@
 import { API_CONFIG } from "./config"
+import { Coordinates } from "./types"
 
 class WeatherAPI{
     private createUrl(endpoint: string,params: Record<string,string | number>) {
