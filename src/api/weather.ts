@@ -19,7 +19,11 @@ class WeatherAPI{
     };
 
     async getCurrentWeather({lat,lon}:Coordinates) {
-        const url = this.createUrl(`${API_CONFIG.BASE_URL}/weather`, {});
+        const url = this.createUrl(`${API_CONFIG.BASE_URL}/weather`, {
+            lat: lat.toString(),
+            lon: lon.toString(),
+            units: API_CONFIG.DEFAULT_PARAMS.units,
+        });
     }
 
     async getForecast() {}
