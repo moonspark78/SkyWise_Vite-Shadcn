@@ -49,6 +49,6 @@ class WeatherAPI{
 
         return this.fetchData<GeocodingResponse[]>(url)
     }
-
-
 }
+
+export const weatherAPI = new WeatherAPI()

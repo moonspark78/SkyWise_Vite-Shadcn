@@ -1,8 +1,13 @@
-import React from 'react'
+
 
 const WeatherDashboard = () => {
   return (
-    <div>WeatherDashboard</div>
+    <div>
+      {/* Favorite Cities */}
+      <div>
+        <h1>My Location</h1>
+      </div>
+    </div>
   )
 }
 
