@@ -6,8 +6,8 @@ const WeatherDashboard = () => {
   return (
     <div>
       {/* Favorite Cities */}
-      <div>
-        <h1>My Location</h1>
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl">My Location</h1>
         <Button>
           <RefreshCcw/>
         </Button>
