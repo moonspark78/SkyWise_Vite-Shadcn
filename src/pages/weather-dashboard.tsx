@@ -7,8 +7,8 @@ const WeatherDashboard = () => {
     <div>
       {/* Favorite Cities */}
       <div className="flex items-center justify-between">
-        <h1 className="text-xl">My Location</h1>
-        <Button>
+        <h1 className="text-xl font-bold tracking-tight">My Location</h1>
+        <Button variant={"outline"}>
           <RefreshCcw/>
         </Button>
       </div>
