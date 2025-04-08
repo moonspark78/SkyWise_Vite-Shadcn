@@ -16,7 +16,9 @@ const useGeolocation = () => {
         isLoading: false
     });
 
-    const getLocation=()=>{}
+    const getLocation=()=>{
+        setLocationData((prev) => ({...prev, isLoading: true, error: null}));
+    }
 
 
     useEffect(()=>{
