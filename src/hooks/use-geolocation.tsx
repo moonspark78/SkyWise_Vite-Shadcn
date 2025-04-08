@@ -1,5 +1,5 @@
 import { Coordinates } from "@/api/types";
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 interface GeolocationState {
     coordinates: Coordinates | null;
@@ -15,9 +15,19 @@ const useGeolocation = () => {
         error: null,
         isLoading: false
     });
-  return (
-    <div>useGeolocation</div>
-  )
+
+    const getLocation=()=>{}
+
+
+    useEffect(()=>{
+        getLocation();
+    },[])
+
+
+  return {
+    ...locationData,
+    getLocation
+  }
 }
 
 export default useGeolocation
