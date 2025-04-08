@@ -18,6 +18,13 @@ const useGeolocation = () => {
 
     const getLocation=()=>{
         setLocationData((prev) => ({...prev, isLoading: true, error: null}));
+        if (!navigator.geolocation) {
+            setLocationData({
+                coordinates: null,
+                isLoading: false,
+                error: "Geolocation is not supported by this browser."
+            });
+        }
     }
 
 
