@@ -26,8 +26,15 @@ const useGeolocation = () => {
             });
             return;
         }
-        navigator.geolocation.getCurrentPosition((position)) =>{
-            setLocationData({})
+        navigator.geolocation.getCurrentPosition((position) =>{
+            setLocationData({
+                coordinates:{
+                    lat: position.coords.latitude,
+                    lon: position.coords.longitude,
+                },
+                error: null,
+                isLoading: false,
+            })
         })
     }
 
