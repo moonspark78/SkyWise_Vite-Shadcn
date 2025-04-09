@@ -24,7 +24,11 @@ const useGeolocation = () => {
                 isLoading: false,
                 error: "Geolocation is not supported by this browser."
             });
+            return;
         }
+        navigator.geolocation.getCurrentPosition((position)) =>{
+            setLocationData({})
+        })
     }
 
 
