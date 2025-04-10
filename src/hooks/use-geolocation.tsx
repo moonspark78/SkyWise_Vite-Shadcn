@@ -51,12 +51,16 @@ const useGeolocation = () => {
                     default:
                     errorMessage = "An unknown error occurred.";
             }
-            setLocationData({
+                setLocationData({
                 coordinates: null,
                 error: errorMessage,
                 isLoading: false,
-            });
-        });
+                });
+            },{
+            enableHighAccuracy: true,
+            }
+        );
+
     };
 
 
