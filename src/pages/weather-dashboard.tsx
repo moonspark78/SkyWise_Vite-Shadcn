@@ -3,6 +3,7 @@ import { RefreshCcw } from "lucide-react"
 
 
 const WeatherDashboard = () => {
+  const { coordinates, error, geoLocation ,isLoading } = useGeolocation();
   return (
     <div className="space-y-4">
       {/* Favorite Cities */}
