@@ -58,6 +58,7 @@ const useGeolocation = () => {
                 });
             },{
             enableHighAccuracy: true,
+            timeout: 5000,
             }
         );
 
