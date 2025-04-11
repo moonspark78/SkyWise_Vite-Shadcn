@@ -1,5 +1,6 @@
+import WeatherSkeleton from "@/components/loading-skeleton";
 import { Button } from "@/components/ui/button"
-import { get } from "http";
+import useGeolocation from "@/hooks/use-geolocation";
 import { RefreshCcw } from "lucide-react"
 
 
@@ -12,6 +13,10 @@ const WeatherDashboard = () => {
     if(coordinates){
       //reload weather data
     }
+  };
+
+  if(locationLoading){
+    return <WeatherSkeleton/>;
   }
   
   return (
