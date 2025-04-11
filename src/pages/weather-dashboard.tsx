@@ -4,7 +4,7 @@ import { RefreshCcw } from "lucide-react"
 
 
 const WeatherDashboard = () => {
-  const { coordinates, error, getLocation ,isLoading } = useGeolocation();
+  const { coordinates, error: locationError, getLocation ,isLoading: locationLoading } = useGeolocation();
   console.log(coordinates);
 
   const handleRefresh = () =>{
