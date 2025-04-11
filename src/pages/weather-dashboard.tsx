@@ -1,13 +1,18 @@
 import { Button } from "@/components/ui/button"
-import { log } from "console";
+import { get } from "http";
 import { RefreshCcw } from "lucide-react"
 
 
 const WeatherDashboard = () => {
-  const { coordinates, error, geoLocation ,isLoading } = useGeolocation();
+  const { coordinates, error, getLocation ,isLoading } = useGeolocation();
   console.log(coordinates);
 
-  const handleRefresh = () =>{}
+  const handleRefresh = () =>{
+    getLocation();
+    if(coordinates){
+      //reload weather data
+    }
+  }
   
   return (
     <div className="space-y-4">
