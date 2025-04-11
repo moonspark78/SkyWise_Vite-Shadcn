@@ -6,6 +6,8 @@ import { RefreshCcw } from "lucide-react"
 const WeatherDashboard = () => {
   const { coordinates, error, geoLocation ,isLoading } = useGeolocation();
   console.log(coordinates);
+
+  const handleRefresh = () =>{}
   
   return (
     <div className="space-y-4">
@@ -15,7 +17,7 @@ const WeatherDashboard = () => {
         <Button 
           variant={"outline"} 
           size={"icon"}
-          //onclick={handleRefresh}
+          onClick={handleRefresh}
           //disabled={}
           >
           <RefreshCcw className="h-4 w-4"/>
