@@ -18,6 +18,11 @@ const WeatherDashboard = () => {
   if(locationLoading){
     return <WeatherSkeleton/>;
   }
+
+  if(locationError){
+
+  }
+  
   
   return (
     <div className="space-y-4">
