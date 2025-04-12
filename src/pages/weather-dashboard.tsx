@@ -25,17 +25,19 @@ const WeatherDashboard = () => {
   }
 
   if (locationError) {
-    <Alert variant="destructive">
+    return(
+      <Alert variant="destructive">
       <AlertCircle className="h-4 w-4" />
       <AlertTitle>Location Error</AlertTitle>
       <AlertDescription>
         <p>{locationError}</p>
-        <Button onClick={getLocation}>
+        <Button onClick={getLocation} variant={"outline"} className="w-fit">
           <MapPin className="mt-2 h-4 w-4" />
           Enable Location
         </Button>
       </AlertDescription>
-    </Alert>;
+    </Alert>
+    )
   }
 
   return (
