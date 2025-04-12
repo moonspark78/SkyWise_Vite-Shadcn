@@ -30,7 +30,7 @@ const WeatherDashboard = () => {
       <AlertTitle>Location Error</AlertTitle>
       <AlertDescription>
         <p>{locationError}</p>
-        <Button>
+        <Button onClick={getLocation}>
           <MapPin className="mt-2 h-4 w-4" />
           Enable Location
         </Button>
