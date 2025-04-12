@@ -2,7 +2,7 @@ import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import useGeolocation from "@/hooks/use-geolocation";
-import { AlertCircle, RefreshCcw } from "lucide-react";
+import { AlertCircle, MapPin, RefreshCcw } from "lucide-react";
 
 const WeatherDashboard = () => {
   const {
@@ -30,6 +30,10 @@ const WeatherDashboard = () => {
       <AlertTitle>Location Error</AlertTitle>
       <AlertDescription>
         <p>{locationError}</p>
+        <Button>
+          <MapPin className="mt-2 h-4 w-4" />
+          Enable Location
+        </Button>
       </AlertDescription>
     </Alert>;
   }
