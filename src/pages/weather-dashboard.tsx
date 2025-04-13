@@ -29,7 +29,7 @@ const WeatherDashboard = () => {
       <Alert variant="destructive">
       <AlertCircle className="h-4 w-4" />
       <AlertTitle>Location Error</AlertTitle>
-      <AlertDescription>
+      <AlertDescription className="flex flex-col gap-4">
         <p>{locationError}</p>
         <Button onClick={getLocation} variant={"outline"} className="w-fit">
           <MapPin className="mt-2 h-4 w-4" />
