@@ -9,6 +9,6 @@ export const WEATHER_KEYS={
 
 export function useWeatherQuery(coordinates: Coordinates | null){
     useQuery({
-        queryKey: ,
+        queryKey: WEATHER_KEYS.weather(coordinates ?? { lat: 0, lon: 0 }),
     })
 }
