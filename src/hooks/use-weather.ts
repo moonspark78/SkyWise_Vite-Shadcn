@@ -17,3 +17,11 @@ export function useWeatherQuery(coordinates: Coordinates | null){
         enabled: !!coordinates,
     })
 }
+
+export function useForecastQuery(coordinates: Coordinates | null){
+    return useQuery({
+        queryKey: WEATHER_KEYS.forecast(coordinates ?? { lat: 0, lon: 0 }),
+        queryFn: () => (coordinates ? weatherAPI.getForecast(coordinates) : null),
+        enabled: !!coordinates,
+    })
+}
