@@ -24,6 +24,7 @@ const WeatherDashboard = () => {
     if (coordinates) {
       weatherQuery.refetch();
       forcastQuery.refetch();
+      locationQuery.refetch();
     }
   };
 
@@ -61,6 +62,8 @@ const WeatherDashboard = () => {
     </Alert>
     )
   }
+
+  const locationName= locationQuery.data?.[0];
 
   return (
     <div className="space-y-4">
