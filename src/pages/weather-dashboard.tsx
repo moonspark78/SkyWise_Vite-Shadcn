@@ -23,6 +23,7 @@ const WeatherDashboard = () => {
     getLocation();
     if (coordinates) {
       weatherQuery.refetch();
+      forcastQuery.refetch();
     }
   };
 
