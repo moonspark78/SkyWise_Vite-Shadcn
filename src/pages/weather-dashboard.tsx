@@ -65,6 +65,10 @@ const WeatherDashboard = () => {
 
   const locationName= locationQuery.data?.[0];
 
+  if(weatherQuery.error || forcastQuery.error){
+    
+  }
+
   return (
     <div className="space-y-4">
       {/* Favorite Cities */}
