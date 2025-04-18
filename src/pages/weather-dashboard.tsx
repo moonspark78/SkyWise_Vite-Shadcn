@@ -81,6 +81,10 @@ const WeatherDashboard = () => {
     )
   }
 
+  if (!weatherQuery.data || !forcastQuery.data) {
+    return <WeatherSkeleton />;
+  }
+
   return (
     <div className="space-y-4">
       {/* Favorite Cities */}
