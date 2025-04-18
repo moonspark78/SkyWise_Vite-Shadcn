@@ -66,7 +66,19 @@ const WeatherDashboard = () => {
   const locationName= locationQuery.data?.[0];
 
   if(weatherQuery.error || forcastQuery.error){
-    
+    return(
+      <Alert variant="destructive">
+      <AlertTriangle className="h-4 w-4" />
+      <AlertTitle>Location Error</AlertTitle>
+      <AlertDescription className="flex flex-col gap-4">
+        <p>{locationError}</p>
+        <Button onClick={getLocation} variant={"outline"} className="w-fit">
+          <MapPin className="mt-2 h-4 w-4" />
+          Enable Location
+        </Button>
+      </AlertDescription>
+    </Alert>
+    )
   }
 
   return (
