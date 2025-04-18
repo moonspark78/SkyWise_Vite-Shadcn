@@ -94,9 +94,9 @@ const WeatherDashboard = () => {
           variant={"outline"}
           size={"icon"}
           onClick={handleRefresh}
-          //disabled={}
+          disabled={weatherQuery.isFetching || forcastQuery.isFetching}
         >
-          <RefreshCcw className="h-4 w-4" />
+          <RefreshCcw className={`h-4 w-4 ${weatherQuery.isFetching? "animate-spin" : ""}`}/>
         </Button>
       </div>
       {/* Current and Hourly weather */}
