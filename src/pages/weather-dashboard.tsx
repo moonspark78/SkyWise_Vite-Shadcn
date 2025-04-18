@@ -69,12 +69,12 @@ const WeatherDashboard = () => {
     return(
       <Alert variant="destructive">
       <AlertTriangle className="h-4 w-4" />
-      <AlertTitle>Location Error</AlertTitle>
+      <AlertTitle> Error</AlertTitle>
       <AlertDescription className="flex flex-col gap-4">
-        <p>{locationError}</p>
-        <Button onClick={getLocation} variant={"outline"} className="w-fit">
-          <MapPin className="mt-2 h-4 w-4" />
-          Enable Location
+        <p>Failed to fetch weather data. Please try again</p>
+        <Button onClick={handleRefresh} variant={"outline"} className="w-fit">
+          <RefreshCcw  className="mt-2 h-4 w-4" />
+          Retry
         </Button>
       </AlertDescription>
     </Alert>
