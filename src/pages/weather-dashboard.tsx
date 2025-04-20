@@ -99,7 +99,21 @@ const WeatherDashboard = () => {
           <RefreshCcw className={`h-4 w-4 ${weatherQuery.isFetching? "animate-spin" : ""}`}/>
         </Button>
       </div>
+
       {/* Current and Hourly weather */}
+      <div>
+        <div>
+          {/* current weather */}
+          {/* Hourly temperature */}
+        </div>
+
+        <div>
+          {/* Details */}
+          {/* Forcast */}
+        </div>
+
+      </div>
+
     </div>
   );
 };
