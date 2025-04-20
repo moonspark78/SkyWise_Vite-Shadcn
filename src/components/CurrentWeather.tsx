@@ -1,6 +1,11 @@
+import { GeocodingResponse, WeatherData } from "@/api/types"
 
+interface CurrentWeatherProps {
+    data: WeatherData;
+    locationName?: GeocodingResponse;
+}
 
-const CurrentWeather = () => {
+const CurrentWeather = ({data, locationName}) => {
   return (
     <div>CurrentWeather</div>
   )
