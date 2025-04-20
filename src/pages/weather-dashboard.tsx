@@ -102,7 +102,8 @@ const WeatherDashboard = () => {
 
       {/* Current and Hourly weather */}
       <div>
-        <div>
+        <div className="grid gap-6">
+          <CurrentWeather data={weatherQuery.data} locationName={locationName}/>
           {/* current weather */}
           {/* Hourly temperature */}
         </div>
