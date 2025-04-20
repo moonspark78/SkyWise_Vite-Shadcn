@@ -1,3 +1,4 @@
+import CurrentWeather from "@/components/CurrentWeather";
 import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";

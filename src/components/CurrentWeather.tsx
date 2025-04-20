@@ -5,7 +5,7 @@ interface CurrentWeatherProps {
     locationName?: GeocodingResponse;
 }
 
-const CurrentWeather = ({data, locationName}) => {
+const CurrentWeather = ({data, locationName}: CurrentWeatherProps) => {
   return (
     <div>CurrentWeather</div>
   )
