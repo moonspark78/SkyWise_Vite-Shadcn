@@ -1,5 +1,5 @@
 import { GeocodingResponse, WeatherData } from "@/api/types";
-import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, } from "./ui/card";
 
 interface CurrentWeatherProps {
   data: WeatherData;
@@ -12,19 +12,12 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
     main: { temp, feels_like, humidity, temp_min, temp_max },
     wind: { speed },
   }= data
-  
+
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
-      </CardHeader>
-      <CardContent>
+    <Card className="overflow-hidden"> 
+      <CardContent className="p-6">
         <p>Card Content</p>
       </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
     </Card>
   );
 };
