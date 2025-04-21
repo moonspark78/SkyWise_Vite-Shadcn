@@ -7,7 +7,10 @@ interface CurrentWeatherProps {
 }
 
 const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
-  
+  const {
+    weather : [currentWeather],
+
+  }= data
   return (
     <Card>
       <CardHeader>
