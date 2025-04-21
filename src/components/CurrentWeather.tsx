@@ -9,6 +9,7 @@ interface CurrentWeatherProps {
 const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
   const {
     weather : [currentWeather],
+    main: { temp, feels_like, humidity, temp_min, temp_max },
 
   }= data
   return (
