@@ -21,6 +21,13 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
             <div className="space-y-2">
               <div className="flex items-center">
                   <h2>{locationName?.name}</h2>
+                  {
+                    locationName?.state &&(
+                      <span>
+                        , {locationName.state}
+                      </span>
+                    )
+                  }
               </div>
               <p></p>
             </div>
