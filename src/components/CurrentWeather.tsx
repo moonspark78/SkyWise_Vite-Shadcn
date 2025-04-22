@@ -19,7 +19,10 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
         <div className="grid gap-6 md:grid-cols-2">
           <div className="space-y-4">
             <div className="space-y-2">
-
+              <div className="flex items-center">
+                  <h2>{locationName?.name}</h2>
+              </div>
+              <p></p>
             </div>
           </div>
         </div>
