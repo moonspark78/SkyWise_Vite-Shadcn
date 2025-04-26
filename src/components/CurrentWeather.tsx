@@ -37,8 +37,18 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
             </div>
 
             <div className="flex items-center gap-2">
-              {temp}
+              <p className="text-5xl font-bold tracking-tighter">
+                {formatTemp(temp)}
+              </p>
+
+              <div className="space-y-1">
+                <p className="text-sm font-medium text-muted-foreground">
+                  Feels like: {formatTemp(feels_like)}
+                </p>
+              </div>
+
             </div>
+            
           </div>
         </div>
       </CardContent>
