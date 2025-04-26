@@ -46,9 +46,9 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
                 <p className="text-sm font-medium text-muted-foreground">
                   Feels like: {formatTemp(feels_like)}
                 </p>
-                <div>
-                  <span>
-                    <ArrowDown/>
+                <div className="flex gap-2 text-sm font-medium">
+                  <span className="flex items-center gap-1 text-blue-500">
+                    <ArrowDown className="h-3 w-3"/>
                     {formatTemp(temp_min)}
                   </span>
                 </div>
