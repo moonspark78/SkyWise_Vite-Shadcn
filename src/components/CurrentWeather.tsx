@@ -1,6 +1,6 @@
 import { GeocodingResponse, WeatherData } from "@/api/types";
 import { Card, CardContent, } from "./ui/card";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowUp } from "lucide-react";
 
 interface CurrentWeatherProps {
   data: WeatherData;
@@ -51,11 +51,15 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
                     <ArrowDown className="h-3 w-3"/>
                     {formatTemp(temp_min)}
                   </span>
+                  <span className="flex items-center gap-1 text-blue-500">
+                    <ArrowUp className="h-3 w-3"/>
+                    {formatTemp(temp_max)}
+                  </span>
                 </div>
               </div>
-
             </div>
 
+            
           </div>
         </div>
       </CardContent>
