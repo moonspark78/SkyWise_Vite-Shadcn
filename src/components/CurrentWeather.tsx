@@ -72,7 +72,7 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
                 <Wind className="h-4 w-4 text-blue-500"/>
                 <div className="space-y-0.5">
                   <p className="text-sm font-medium">Wind Speed</p>
-                  <p className="text-sm text-muted-foreground">{speed}%</p>
+                  <p className="text-sm text-muted-foreground">{speed} m/s</p>
                 </div>
               </div>
 
