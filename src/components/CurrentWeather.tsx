@@ -87,7 +87,9 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
                 className="h-full w-full object-contain" 
               />
               <div className="absolute bottom-0 text-center">
-
+                  <p className="text-sm font-medium capitalize">
+                    {currentWeather.description}
+                  </p>
               </div>
             </div>
         </div>
