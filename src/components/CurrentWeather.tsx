@@ -86,6 +86,9 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
                 alt={currentWeather.description}
                 className="h-full w-full object-contain" 
               />
+              <div className="absolute bottom-0 text-center">
+
+              </div>
             </div>
         </div>
       </CardContent>
