@@ -81,7 +81,11 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
 
         <div className=" flex flex-col items-center justify-center">
             <div className="relative flex aspect-square w-full max-w-[200px] items-center justify-center">
-
+              <img 
+                src="" 
+                alt={currentWeather.description}
+                className="h-full w-full object-contain" 
+              />
             </div>
         </div>
       </CardContent>
