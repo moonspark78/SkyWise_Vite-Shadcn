@@ -75,10 +75,14 @@ const CurrentWeather = ({ data, locationName }: CurrentWeatherProps) => {
                   <p className="text-sm text-muted-foreground">{speed} m/s</p>
                 </div>
               </div>
-
-
             </div>
           </div>
+        </div>
+
+        <div className=" flex flex-col items-center justify-center">
+            <div className="relative flex aspect-square w-full max-w-[200px] items-center justify-center">
+
+            </div>
         </div>
       </CardContent>
     </Card>
