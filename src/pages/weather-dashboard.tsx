@@ -108,7 +108,7 @@ const WeatherDashboard = () => {
           {/* current weather */}
           <CurrentWeather data={weatherQuery.data} locationName={locationName}/>
           {/* Hourly temperature */}
-          <HourlyTemperature/>
+          <HourlyTemperature data={forcastQuery.data}/>
         </div>
 
         <div>
