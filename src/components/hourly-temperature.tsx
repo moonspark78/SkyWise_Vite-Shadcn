@@ -1,5 +1,5 @@
 import type { ForecastData } from "@/api/types";
-import { Card } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 interface HourlyTemperatureProps {
   data: ForecastData;
@@ -7,9 +7,9 @@ interface HourlyTemperatureProps {
 
 const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
   return (
-    <Card>
+    <Card className="flex-1">
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
+        <CardTitle>Today's Temperature</CardTitle>
       </CardHeader>
       <CardContent>
         <p>Card Content</p>
