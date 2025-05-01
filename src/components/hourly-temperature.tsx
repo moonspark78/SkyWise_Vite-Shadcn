@@ -1,6 +1,6 @@
 import type { ForecastData } from "@/api/types";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import {Lne, LineChart, ResponsiveContainer} from "recharts";
+import {LineChart, ResponsiveContainer, Line} from "recharts";
 import { format } from "date-fns";
 
 interface HourlyTemperatureProps {
@@ -22,7 +22,13 @@ const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
         <CardTitle>Today's Temperature</CardTitle>
       </CardHeader>
       <CardContent>
-        <p>Card Content</p>
+        <div className="h-[200px] w-full">
+          <ResponsiveContainer width={"100%"} height={"100%"}>
+            <LineChart data={chartData}>
+              <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
       </CardContent>
     </Card>
   );
