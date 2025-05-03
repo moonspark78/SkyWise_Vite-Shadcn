@@ -1,6 +1,7 @@
 import type { WeatherData } from "@/api/types"
-import { format } from "path";
-import { title } from "process";
+import { format } from "date-fns";
+import { Sunrise } from "lucide-react";
+
 
 interface WeatherDetailsProps {
     data: WeatherData
@@ -9,14 +10,18 @@ interface WeatherDetailsProps {
 const WeatherDetails = ({data}: WeatherDetailsProps) => {
     const { main, wind, sys } = data;
 
+    const formatTime = (timestamp: number) => {
+        return format (new Date(timestamp * 1000), "h:mm a");
+    };
+
     const details =[
         {
             title: "Sunrise",
             value: formatTime(sys.sunrise),
             icon: Sunrise,
             color: "text-orange-500"
-        }
-    ]
+        },
+    ];
 
   return (
     <div>WeatherDetails</div>
