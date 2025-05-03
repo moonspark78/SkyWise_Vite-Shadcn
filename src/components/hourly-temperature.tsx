@@ -45,7 +45,11 @@ const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
               <Tooltip content={({ active, payload }) => {
                 if (active && payload && payload.length){
                   return(
-                    
+                    <div>
+                      <div>
+                        <div></div>
+                      </div>
+                    </div>
                   )
                 }
               }}/>
