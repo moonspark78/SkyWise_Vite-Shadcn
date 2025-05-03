@@ -64,6 +64,7 @@ const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
                       </div>
                     );
                   }
+                  return null;
                 }}
               />
 
