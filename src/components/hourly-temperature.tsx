@@ -1,21 +1,25 @@
 import type { ForecastData } from "@/api/types";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import {Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+import {
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
 import { format } from "date-fns";
-
 
 interface HourlyTemperatureProps {
   data: ForecastData;
 }
 
 const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
-
-  const chartData = data.list.slice(0,8).map((item) => ({
+  const chartData = data.list.slice(0, 8).map((item) => ({
     time: format(new Date(item.dt * 1000), "ha"),
     temp: Math.round(item.main.temp),
     feels_like: Math.round(item.main.feels_like),
   }));
-
 
   return (
     <Card className="flex-1">
@@ -42,26 +46,26 @@ const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
               />
 
               {/* tooptip */}
-              <Tooltip content={({ active, payload }) => {
-                if (active && payload && payload.length){
-                  return(
-                    <div>
-                      <div>
+              <Tooltip
+                content={({ active, payload }) => {
+                  if (active && payload && payload.length) {
+                    return (
+                      <div className="rounded-lg border bg-background p-2 shadow-sm">
                         <div>
-                          <span>Temperature</span>
-                          <span>{payload[0].value}°C</span>
+                          <div>
+                            <span>Temperature</span>
+                            <span>{payload[0].value}°C</span>
+                          </div>
+                          <div>
+                            <span>Feels Like</span>
+                            <span>{payload[1].value}°C</span>
+                          </div>
                         </div>
                       </div>
-                      <div>
-                        <div>
-                          <span>Feels Like</span>
-                          <span>{payload[1].value}°C</span>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                }
-              }}/>
+                    );
+                  }
+                }}
+              />
 
               {/* line chart */}
               <Line
@@ -69,7 +73,7 @@ const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
                 dataKey="temp"
                 stroke="#8884d8"
                 strokeWidth={2}
-                dot={false} 
+                dot={false}
               />
               <Line
                 type="monotone"
