@@ -47,7 +47,10 @@ const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
                   return(
                     <div>
                       <div>
-                        <div></div>
+                        <div>
+                          <span>Temperature</span>
+                          <span>{payload[0].value}°C</span>
+                        </div>
                       </div>
                     </div>
                   )
