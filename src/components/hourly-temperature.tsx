@@ -51,8 +51,8 @@ const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
                   if (active && payload && payload.length) {
                     return (
                       <div className="rounded-lg border bg-background p-2 shadow-sm">
-                        <div>
-                          <div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="flex flex-col">
                             <span>Temperature</span>
                             <span>{payload[0].value}°C</span>
                           </div>
