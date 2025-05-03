@@ -1,6 +1,6 @@
 import type { ForecastData } from "@/api/types";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import {Line, LineChart, ResponsiveContainer, XAxis, YAxis} from "recharts";
+import {Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import { format } from "date-fns";
 
 
@@ -42,6 +42,15 @@ const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
               />
 
               {/* tooptip */}
+              <Tooltip content={({ active, payload }) => {
+                if (active && payload && payload.length){
+                  return(
+                    
+                  )
+                }
+              }}/>
+
+              {/* line chart */}
               <Line
                 type="monotone"
                 dataKey="temp"
