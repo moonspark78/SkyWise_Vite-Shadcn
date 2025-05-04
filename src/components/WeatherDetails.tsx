@@ -1,6 +1,6 @@
 import type { WeatherData } from "@/api/types"
 import { format } from "date-fns";
-import { Compass, Sunrise, Sunset } from "lucide-react";
+import { Compass, Gauge, Sunrise, Sunset } from "lucide-react";
 
 
 interface WeatherDetailsProps {
@@ -45,9 +45,9 @@ const WeatherDetails = ({data}: WeatherDetailsProps) => {
         },
         {
             title: "Pressure",
-            value: `${getWindDirection(wind.deg)} (${wind.speed}°C)`,
-            icon: Compass,
-            color: "text-green-500"
+            value: `${main.pressure} hPa`,
+            icon: Gauge,
+            color: "text-purple-500"
         },
     ];
 
