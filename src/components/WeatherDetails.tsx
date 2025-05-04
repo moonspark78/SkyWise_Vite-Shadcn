@@ -13,6 +13,11 @@ const WeatherDetails = ({data}: WeatherDetailsProps) => {
     const formatTime = (timestamp: number) => {
         return format (new Date(timestamp * 1000), "h:mm a");
     };
+    
+
+    const getWindDirection = (degree: number) =>{};
+
+
 
     const details =[
         {
