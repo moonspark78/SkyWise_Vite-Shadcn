@@ -1,6 +1,6 @@
 import type { WeatherData } from "@/api/types"
 import { format } from "date-fns";
-import { Sunrise, Sunset } from "lucide-react";
+import { Compass, Sunrise, Sunset } from "lucide-react";
 
 
 interface WeatherDetailsProps {
@@ -18,7 +18,8 @@ const WeatherDetails = ({data}: WeatherDetailsProps) => {
     const getWindDirection = (degree: number) =>{
         const directions = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"];
         
-        const index = 
+        const index = Math.round(((degree%= 360) < 0 ? degree + 360 : degree) / 45) % 8;
+        return directions[index];
     };
 
 
@@ -35,6 +36,18 @@ const WeatherDetails = ({data}: WeatherDetailsProps) => {
             value: formatTime(sys.sunset),
             icon: Sunset,
             color: "text-blue-500"
+        },
+        {
+            title: "Wind Direction",
+            value: `${getWindDirection(wind.deg)} (${wind.speed}°C)`,
+            icon: Compass,
+            color: "text-green-500"
+        },
+        {
+            title: "Pressure",
+            value: `${getWindDirection(wind.deg)} (${wind.speed}°C)`,
+            icon: Compass,
+            color: "text-green-500"
         },
     ];
 
