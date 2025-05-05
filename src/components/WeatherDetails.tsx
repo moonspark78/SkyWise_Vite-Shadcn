@@ -55,7 +55,15 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
         <CardTitle>Weather Details</CardTitle>
       </CardHeader>
       <CardContent>
-        <p>Card Content</p>
+        <div>
+            {details.map((detail) => {
+                return (
+                    <div>
+                        
+                    </div>
+                )
+            })}
+        </div>
       </CardContent>
     </Card>
   );
