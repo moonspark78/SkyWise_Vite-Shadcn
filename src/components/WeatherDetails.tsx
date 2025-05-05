@@ -58,7 +58,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
         <div className="grid gap-6 sm:grid-cols-2">
             {details.map((detail) => {
                 return (
-                    <div key={detail.title}>
+                    <div key={detail.title} className="flex items-center gap-3 rounded-lg border p-4">
                         <detail.icon/>
                     </div>
                 )
