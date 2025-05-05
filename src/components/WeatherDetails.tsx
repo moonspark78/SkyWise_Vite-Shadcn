@@ -59,7 +59,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             {details.map((detail) => {
                 return (
                     <div>
-                        
+                        <detail.icon/>
                     </div>
                 )
             })}
