@@ -1,6 +1,11 @@
+import { ForecastData } from "@/api/types";
 
 
-const WeatherForcast = () => {
+interface HourlyTemperatureProps {
+  data: ForecastData;
+}
+
+const WeatherForcast = ({data}: HourlyTemperatureProps) => {
   return (
     <div>WeatherForcast</div>
   )
