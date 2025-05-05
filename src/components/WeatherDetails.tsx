@@ -58,7 +58,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
         <div className="grid gap-6 sm:grid-cols-2">
             {details.map((detail) => {
                 return (
-                    <div>
+                    <div key={detail.title}>
                         <detail.icon/>
                     </div>
                 )
