@@ -52,7 +52,7 @@ const WeatherForcast = ({ data }: WeatherForcastProps) => {
                 return <div key={day.date}>
                     <div>
                         <p>{format(new Date(day.date *1000), "EEEE, MMM d")}</p>
-                        <p>{}</p>
+                        <p>{day.weather.description}</p>
                     </div>
                 </div>
             })}
