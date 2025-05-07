@@ -1,5 +1,6 @@
 import type { ForecastData } from "@/api/types";
 import { format } from "date-fns";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 interface WeatherForcastProps {
   data: ForecastData;
@@ -46,10 +47,13 @@ const WeatherForcast = ({ data }: WeatherForcastProps) => {
         <CardTitle>5-Day Forecast</CardTitle>
       </CardHeader>
       <CardContent>
-        <div>
+        <div className="grid gap-4">
             {nextDays.map((day) =>{
                 return <div key={day.date}>
-
+                    <div>
+                        <p>{format(new Date(day.date *1000), "EEEE, MMM d")}</p>
+                        <p>{}</p>
+                    </div>
                 </div>
             })}
         </div>
