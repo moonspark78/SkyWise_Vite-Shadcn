@@ -43,15 +43,17 @@ const WeatherForcast = ({ data }: WeatherForcastProps) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
+        <CardTitle>5-Day Forecast</CardTitle>
       </CardHeader>
       <CardContent>
-        <p>Card Content</p>
+        <div>
+            {nextDays.map((day) =>{
+                return <div key={day.date}>
+
+                </div>
+            })}
+        </div>
       </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
     </Card>
   );
 };
