@@ -39,7 +39,10 @@ const WeatherForcast = ({ data }: WeatherForcastProps) => {
     }
     return acc;
   }, {} as Record<string, DailyForecast>);
+
   const nextDays = Object.values(dailyForcast).slice(0, 6);
+
+  const formatTemp = (temp: number) => `${Math.round(temp)}°C`;
 
   return (
     <Card>
@@ -49,14 +52,22 @@ const WeatherForcast = ({ data }: WeatherForcastProps) => {
       <CardContent>
         <div className="grid gap-4">
             {nextDays.map((day) =>{
-                return <div key={day.date} className="grid grid-cols-3 items-center gap-4 rounded-lg p-4 border">
+                return (
+                <div key={day.date} className="grid grid-cols-3 items-center gap-4 rounded-lg p-4 border">
                     <div>
                         <p className="font-medium">
                           {format(new Date(day.date *1000), "EEEE, MMM d")}
                         </p>
                         <p className="text-sm text-muted-foreground capitalize">{day.weather.description}</p>
                     </div>
+
+                    <div>
+                      
+                    </div>
+
+                    <div></div>
                 </div>
+            );
             })}
         </div>
       </CardContent>
