@@ -1,6 +1,7 @@
 import type { ForecastData } from "@/api/types";
 import { format } from "date-fns";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { ArrowDown } from "lucide-react";
 
 interface WeatherForcastProps {
   data: ForecastData;
@@ -61,8 +62,10 @@ const WeatherForcast = ({ data }: WeatherForcastProps) => {
                         <p className="text-sm text-muted-foreground capitalize">{day.weather.description}</p>
                     </div>
 
-                    <div>
-                      
+                    <div className="flex justify-center gap-4">
+                        <span>
+                          <ArrowDown className="mr-1 h-4 w-4"/>
+                        </span>
                     </div>
 
                     <div></div>
