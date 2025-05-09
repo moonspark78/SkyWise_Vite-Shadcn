@@ -33,8 +33,12 @@ const CitySearch = () => {
           )}
           <CommandGroup heading="Suggestions">
             <CommandItem>Calendar</CommandItem>
-            <CommandItem>Search Emoji</CommandItem>
-            <CommandItem>Calculator</CommandItem>
+          </CommandGroup>
+          <CommandGroup heading="Suggestions">
+            <CommandItem>Calendar</CommandItem>
+          </CommandGroup>
+          <CommandGroup heading="Suggestions">
+            <CommandItem>Calendar</CommandItem>
           </CommandGroup>
         </CommandList>
       </CommandDialog>
