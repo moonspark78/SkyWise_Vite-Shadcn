@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
+import { Search } from "lucide-react";
 
 
 
@@ -10,7 +11,10 @@ const CitySearch = () => {
   return (
     <>
 
-    <Button>Search cities ...</Button>
+    <Button>
+      <Search className="mr-2 h-4 w-4"/>
+      Search cities ...
+    </Button>
 
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
