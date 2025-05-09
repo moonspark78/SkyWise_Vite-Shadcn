@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
+import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
 import { Search } from "lucide-react";
 import { useSearchLocations } from "@/hooks/use-weather";
 
@@ -31,12 +31,14 @@ const CitySearch = () => {
           {query.length>2 && !isLoading && (
             <CommandEmpty>No results found.</CommandEmpty>
           )}
-          <CommandGroup heading="Suggestions">
+          <CommandGroup heading="Favorites">
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
-          <CommandGroup heading="Suggestions">
+          <CommandSeparator/>
+          <CommandGroup heading="Recent Searches">
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
+          <CommandSeparator/>
           <CommandGroup heading="Suggestions">
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
