@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
 
 
 
 const CitySearch = () => {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
   return (
     <>
 
