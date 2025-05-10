@@ -3,12 +3,14 @@ import { Button } from "./ui/button";
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
 import { Loader2, Search } from "lucide-react";
 import { useSearchLocations } from "@/hooks/use-weather";
+import { useNavigate } from "react-router-dom";
 
 
 
 const CitySearch = () => {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
   const {data: locations, isLoading} =  useSearchLocations(query)
 
