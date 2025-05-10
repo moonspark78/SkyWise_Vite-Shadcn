@@ -60,9 +60,12 @@ const CitySearch = () => {
                     onSelect={handleSelect}
                   >
                     <Search className="mr-2 h-4 w-4"/>
-                    <span>
-                    {location.name}
-                    </span>
+                    <span>{location.name}</span>
+                    {location.state && (
+                      <span className="text-sm text-muted-foreground">
+                        , {location.state}
+                      </span>
+                    )}
                   </CommandItem>
                 );
               })}
