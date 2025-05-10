@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
-import { Search } from "lucide-react";
+import { Loader2, Search } from "lucide-react";
 import { useSearchLocations } from "@/hooks/use-weather";
 
 
@@ -45,6 +45,11 @@ const CitySearch = () => {
 
           {locations && locations.length > 0 && (
             <CommandGroup heading="Suggestions">
+              {isLoading && (
+                <div>
+                  <Loader2 className="h-4 w-4 animate-spin"/>
+                </div>
+              )}
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
           )}
