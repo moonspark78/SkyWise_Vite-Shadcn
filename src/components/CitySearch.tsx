@@ -34,14 +34,21 @@ const CitySearch = () => {
           <CommandGroup heading="Favorites">
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
+
           <CommandSeparator/>
+
           <CommandGroup heading="Recent Searches">
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
+
           <CommandSeparator/>
-          <CommandGroup heading="Suggestions">
+
+          {locations && locations.length > 0 && (
+            <CommandGroup heading="Suggestions">
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
+          )}
+
         </CommandList>
       </CommandDialog>
     </>
