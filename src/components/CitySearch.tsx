@@ -14,7 +14,9 @@ const CitySearch = () => {
 
   const {data: locations, isLoading} =  useSearchLocations(query)
 
-  const handleSelect = () => {};
+  const handleSelect = (cityData: string) => {
+    const [lat, lon, name, country] = cityData.split("|");
+  };
 
 
   return (
