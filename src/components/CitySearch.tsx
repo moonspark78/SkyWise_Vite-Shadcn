@@ -53,7 +53,9 @@ const CitySearch = () => {
               {locations.map((location) =>{
                 return (
                   <CommandItem
-                    
+                    key={`${location.lat}-${location.lon}`}
+                    value={`${location.lat}|${location.lon}|${location.name}|${location.country}`}
+                    onSelect={handleSelect}
                   >
                     {location.name}
                   </CommandItem>
