@@ -66,6 +66,9 @@ const CitySearch = () => {
                         , {location.state}
                       </span>
                     )}
+                    <span className="text-sm text-muted-foreground">
+                      , {location.country}
+                    </span>
                   </CommandItem>
                 );
               })}
