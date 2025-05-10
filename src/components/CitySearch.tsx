@@ -18,6 +18,7 @@ const CitySearch = () => {
     const [lat, lon, name, country] = cityData.split("|");
 
     //Add to search history
+    setOpen(false);
     navigate(`/city/${name}??lat=${lat}&lon=${lon}`)
   };
 
