@@ -12,6 +12,8 @@ const CitySearch = () => {
 
   const {data: locations, isLoading} =  useSearchLocations(query)
 
+  const handleSelect = () => {};
+
 
   return (
     <>
@@ -57,7 +59,10 @@ const CitySearch = () => {
                     value={`${location.lat}|${location.lon}|${location.name}|${location.country}`}
                     onSelect={handleSelect}
                   >
+                    <Search className="mr-2 h-4 w-4"/>
+                    <span>
                     {location.name}
+                    </span>
                   </CommandItem>
                 );
               })}
