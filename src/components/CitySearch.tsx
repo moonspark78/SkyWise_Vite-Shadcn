@@ -40,17 +40,25 @@ const CitySearch = () => {
           <CommandGroup heading="Recent Searches">
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
-
+  
           <CommandSeparator/>
 
           {locations && locations.length > 0 && (
             <CommandGroup heading="Suggestions">
               {isLoading && (
-                <div>
+                <div className="flex items-center justify-center p-4">
                   <Loader2 className="h-4 w-4 animate-spin"/>
                 </div>
               )}
-            <CommandItem>Calendar</CommandItem>
+              {locations.map((location) =>{
+                return (
+                  <CommandItem
+                    
+                  >
+                    {location.name}
+                  </CommandItem>
+                );
+              })}
           </CommandGroup>
           )}
 
