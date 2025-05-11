@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { useLocalStorage } from "./use-local-storage";
 
 interface SearchHistoryItem {
@@ -20,5 +20,11 @@ export function useSearchHistory() {
         queryKey: ["search-history"],
         queryFn: () => history,
         initialData: history,
+    })
+
+    const addToHistory = useMutation({
+        mutationFn: async(
+            search: Omit<SearchHistoryItem, "id" | "searchedAt">
+        )
     })
 }
