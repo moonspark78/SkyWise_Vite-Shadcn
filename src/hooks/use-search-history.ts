@@ -25,6 +25,16 @@ export function useSearchHistory() {
     const addToHistory = useMutation({
         mutationFn: async(
             search: Omit<SearchHistoryItem, "id" | "searchedAt">
-        )
-    })
+        ) =>{
+            const newSearch: SearchHistoryItem = {
+                ...search,
+                id: `${search.lat}-${search.lon}-${Date.now()}`,
+                searchedAt: Date.now(),
+            };
+
+            const filteredHistory = history.filter(
+                (item) => (item.lat === search.lat && item.lon === search.lon)
+            );
+        },
+    });
 }
