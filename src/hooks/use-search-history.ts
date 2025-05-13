@@ -1,5 +1,6 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useLocalStorage } from "./use-local-storage";
+import { set } from "date-fns";
 
 interface SearchHistoryItem {
     id: string;
@@ -37,6 +38,8 @@ export function useSearchHistory() {
             );
 
             const newHistory = [newSearch, ...filteredHistory].slice(0, 10);
+
+            setHistory(newHistory);
         },
     });
 }
