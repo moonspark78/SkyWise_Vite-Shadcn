@@ -61,12 +61,14 @@ const CitySearch = () => {
             <CommandItem>Calendar</CommandItem>
           </CommandGroup>
 
-          <CommandSeparator/>
 
-          {history && history.length > 0 && (
+          {history.length > 0 && (
+            <>
+            <CommandSeparator/>
             <CommandGroup heading="Recent Searches">
               <CommandItem>Calendar</CommandItem>
             </CommandGroup>
+            </>
           )}
   
           <CommandSeparator/>
