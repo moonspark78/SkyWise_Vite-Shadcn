@@ -13,14 +13,23 @@ const CitySearch = () => {
   const navigate = useNavigate();
 
   const {data: locations, isLoading} =  useSearchLocations(query)
+  const {history, clearHistory, addToHistory} = useSearchHistory();
 
   const handleSelect = (cityData: string) => {
     const [lat, lon, name, country] = cityData.split("|");
 
     //Add to search history
+
+    addToHistory.mutate({});
+
+
+
+
     setOpen(false);
     navigate(`/city/${name}??lat=${lat}&lon=${lon}`)
   };
+
+
 
 
   return (
