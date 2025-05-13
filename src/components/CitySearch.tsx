@@ -20,7 +20,11 @@ const CitySearch = () => {
 
     //Add to search history
 
-    addToHistory.mutate({});
+    addToHistory.mutate({
+      query,
+      name,
+      lat: parseFloat(lat),
+    });
 
 
 
