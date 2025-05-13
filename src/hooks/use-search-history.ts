@@ -1,6 +1,6 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocalStorage } from "./use-local-storage";
-import { set } from "date-fns";
+
 
 interface SearchHistoryItem {
     id: string;
@@ -17,7 +17,9 @@ interface SearchHistoryItem {
 export function useSearchHistory() {
     const [history, setHistory] = useLocalStorage<SearchHistoryItem[]>("search-history", []);
 
-    useQuery({
+    const queryClient= useQueryClient();
+
+    const historyQuery = useQuery({
         queryKey: ["search-history"],
         queryFn: () => history,
         initialData: history,
@@ -39,6 +41,10 @@ export function useSearchHistory() {
 
             const newHistory = [newSearch, ...filteredHistory].slice(0, 10);
 
+            setHistory(newHistory);
+            return newHistory;
+        },
+        onSuccess: (newHistory) => {
             setHistory(newHistory);
         },
     });
