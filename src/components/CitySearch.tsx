@@ -24,6 +24,8 @@ const CitySearch = () => {
       query,
       name,
       lat: parseFloat(lat),
+      lon: parseFloat(lon),
+      country,
     });
 
 
