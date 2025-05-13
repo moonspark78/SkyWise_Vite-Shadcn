@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
-import { Loader2, Search } from "lucide-react";
+import { Loader2, Search, XCircle } from "lucide-react";
 import { useSearchLocations } from "@/hooks/use-weather";
 import { useNavigate } from "react-router-dom";
 import { useSearchHistory } from "@/hooks/use-search-history";
@@ -65,7 +65,13 @@ const CitySearch = () => {
           {history.length > 0 && (
             <>
             <CommandSeparator/>
-            <CommandGroup heading="Recent Searches">
+            <CommandGroup>
+              <div>
+                <p>Recent Searches</p>
+                <Button>
+                  <XCircle className="h-4 w-4"/>
+                </Button>
+              </div>
               <CommandItem>Calendar</CommandItem>
             </CommandGroup>
             </>
