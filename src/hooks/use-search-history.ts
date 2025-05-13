@@ -58,4 +58,10 @@ export function useSearchHistory() {
             queryClient.setQueryData(["search-history"], []);
         },
     })
+
+    return {
+        history: historyQuery.data ?? [],
+        addToHistory,
+        clearHistory,
+    }
 }
