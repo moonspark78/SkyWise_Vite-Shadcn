@@ -70,6 +70,7 @@ const CitySearch = () => {
                 <p>Recent Searches</p>
                 <Button>
                   <XCircle className="h-4 w-4"/>
+                  Clear
                 </Button>
               </div>
               <CommandItem>Calendar</CommandItem>
