@@ -49,5 +49,10 @@ export function useSearchHistory() {
         },
     });
 
-    
+    const clearHistory = useMutation({
+        mutationFn: async () => {
+            setHistory([]);
+            return [];
+        },
+    })
 }
