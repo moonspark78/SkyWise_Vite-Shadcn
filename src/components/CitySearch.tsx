@@ -4,6 +4,7 @@ import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, C
 import { Loader2, Search } from "lucide-react";
 import { useSearchLocations } from "@/hooks/use-weather";
 import { useNavigate } from "react-router-dom";
+import { useSearchHistory } from "@/hooks/use-search-history";
 
 
 
@@ -62,9 +63,11 @@ const CitySearch = () => {
 
           <CommandSeparator/>
 
-          <CommandGroup heading="Recent Searches">
-            <CommandItem>Calendar</CommandItem>
-          </CommandGroup>
+          {history && history.length > 0 && (
+            <CommandGroup heading="Recent Searches">
+              <CommandItem>Calendar</CommandItem>
+            </CommandGroup>
+          )}
   
           <CommandSeparator/>
 
