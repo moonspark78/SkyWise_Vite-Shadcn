@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
-import { Loader2, Search, XCircle } from "lucide-react";
+import { Clock, Loader2, Search, XCircle } from "lucide-react";
 import { useSearchLocations } from "@/hooks/use-weather";
 import { useNavigate } from "react-router-dom";
 import { useSearchHistory } from "@/hooks/use-search-history";
+import { format } from "path";
 
 
 
@@ -84,7 +85,7 @@ const CitySearch = () => {
                     value={`${location.lat}|${location.lon}|${location.name}|${location.country}`}
                     onSelect={handleSelect}
                   >
-                    <Search className="mr-2 h-4 w-4"/>
+                    <Clock className="mr-2 h-4 w-4 text-muted-foreground"/>
                     <span>{location.name}</span>
                     {location.state && (
                       <span className="text-sm text-muted-foreground">
@@ -93,6 +94,9 @@ const CitySearch = () => {
                     )}
                     <span className="text-sm text-muted-foreground">
                       , {location.country}
+                    </span>
+                    <span>
+                      {format(CommandItem.searchedAt, "MMM d, h:mm a")}
                     </span>
                   </CommandItem>
                  )
