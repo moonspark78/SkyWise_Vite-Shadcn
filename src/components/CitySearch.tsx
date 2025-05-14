@@ -68,7 +68,11 @@ const CitySearch = () => {
             <CommandGroup>
               <div>
                 <p>Recent Searches</p>
-                <Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => clearHistory.mutate()}
+                >
                   <XCircle className="h-4 w-4"/>
                   Clear
                 </Button>
