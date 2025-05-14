@@ -96,7 +96,7 @@ const CitySearch = () => {
                       , {location.country}
                     </span>
                     <span>
-                      {format(CommandItem.searchedAt, "MMM d, h:mm a")}
+                      {format(location.searchedAt, "MMM d, h:mm a")}
                     </span>
                   </CommandItem>
                  )
