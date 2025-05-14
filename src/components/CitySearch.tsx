@@ -77,7 +77,9 @@ const CitySearch = () => {
                   Clear
                 </Button>
               </div>
-              <CommandItem>Calendar</CommandItem>
+              {history.map(() => {
+                 return <CommandItem>Calendar</CommandItem> 
+              })}
             </CommandGroup>
             </>
           )}
