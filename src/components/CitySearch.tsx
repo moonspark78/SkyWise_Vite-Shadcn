@@ -5,7 +5,7 @@ import { Clock, Loader2, Search, XCircle } from "lucide-react";
 import { useSearchLocations } from "@/hooks/use-weather";
 import { useNavigate } from "react-router-dom";
 import { useSearchHistory } from "@/hooks/use-search-history";
-import { format } from "path";
+import { format } from "date-fns";
 
 
 
@@ -58,16 +58,16 @@ const CitySearch = () => {
           {query.length>2 && !isLoading && (
             <CommandEmpty>No results found.</CommandEmpty>
           )}
-          <CommandGroup heading="Favorites">
+          {/* <CommandGroup heading="Favorites">
             <CommandItem>Calendar</CommandItem>
-          </CommandGroup>
+          </CommandGroup> */}
 
 
           {history.length > 0 && (
             <>
             <CommandSeparator/>
             <CommandGroup>
-              <div>
+              <div className="flex items-center justify-between px-2 my-2">
                 <p>Recent Searches</p>
                 <Button
                   variant="ghost"
