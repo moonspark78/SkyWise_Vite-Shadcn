@@ -29,12 +29,8 @@ const CitySearch = () => {
       lon: parseFloat(lon),
       country,
     });
-
-
-
-
     setOpen(false);
-    navigate(`/city/${name}??lat=${lat}&lon=${lon}`)
+    navigate(`/city/${name}?lat=${lat}&lon=${lon}`)
   };
 
 
