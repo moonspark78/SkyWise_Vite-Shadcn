@@ -1,6 +1,9 @@
 import { CurrentWeather } from "@/components/CurrentWeather";
+import HourlyTemperature from "@/components/hourly-temperature";
 import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import WeatherDetails from "@/components/WeatherDetails";
+import WeatherForcast from "@/components/WeatherForcast";
 import { useForecastQuery, useWeatherQuery } from "@/hooks/use-weather";
 import { AlertTriangle } from "lucide-react";
 import { useParams, useSearchParams } from "react-router-dom";
@@ -38,12 +41,11 @@ const CityPage = () => {
       {/* Favorite Cities */}
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold tracking-tight">My Location</h1>
-        
       </div>
 
       {/* Current and Hourly weather */}
       <div className="grid gap-6">
-        <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col gap-4">
           {/* current weather */}
           <CurrentWeather data={weatherQuery.data}/>
           {/* Hourly temperature */}
