@@ -27,12 +27,12 @@ export function useFavorites() {
 
     const addToFavorite = useMutation({
         mutationFn: async(
-            search: Omit<FavoriteCity, "id" | "searchedAt">
+            city: Omit<FavoriteCity, "id" | "addedAt">
         ) =>{
             const newSearch: FavoriteCity = {
-                ...search,
-                id: `${search.lat}-${search.lon}-${Date.now()}`,
-                searchedAt: Date.now(),
+                ...city,
+                id: `${city.lat}-${city.lon}-${Date.now()}`,
+                addedAt: Date.now(),
             };
 
             const filteredHistory = history.filter(
