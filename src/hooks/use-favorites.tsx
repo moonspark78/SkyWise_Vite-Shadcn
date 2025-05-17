@@ -50,19 +50,22 @@ export function useFavorites() {
         },
     });
 
-    const clearHistory = useMutation({
-        mutationFn: async () => {
-            setHistory([]);
-            return [];
+    const removeFavorite = useMutation({
+        mutationFn: async (cityId: string) => {
+            const newFavorites = favorites.filter((city) => city.id !== cityId);
+            setFavorites([]);
+            return newFavorites;
         },
         onSuccess: () => {
-            queryClient.setQueryData(["search-history"], []);
+            queryClient.invalidateQueries({
+                queryKey: ["favorites"],
+            });
         },
     })
 
     return {
         history: historyQuery.data ?? [],
-        addToHistory,
-        clearHistory,
+        addToFavorite,
+        removeFavorite,
     }
 }
