@@ -2,7 +2,6 @@ import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useForecastQuery, useWeatherQuery } from "@/hooks/use-weather";
 import { AlertTriangle } from "lucide-react";
-import { use } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 
 
@@ -29,7 +28,7 @@ const CityPage = () => {
     )
   }
 
-  if (!weatherQuery.data || !forecastQuery.data) {
+  if (!weatherQuery.data || !forecastQuery.data || !params.cityName) {
     return <WeatherSkeleton />;
   }
 
