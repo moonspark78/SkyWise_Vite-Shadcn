@@ -29,20 +29,18 @@ export function useFavorites() {
         mutationFn: async(
             city: Omit<FavoriteCity, "id" | "addedAt">
         ) =>{
-            const newSearch: FavoriteCity = {
+            const newFavorite: FavoriteCity = {
                 ...city,
                 id: `${city.lat}-${city.lon}-${Date.now()}`,
                 addedAt: Date.now(),
             };
 
-            const filteredHistory = history.filter(
-                (item) => !(item.lat === search.lat && item.lon === search.lon)
-            );
+            const exists = favorites.some((fav) => fav.id === newFavorite.id);
 
-            const newHistory = [newSearch, ...filteredHistory].slice(0, 10);
+            const newFavorites = [...favorites, ...newFavorite].slice(0, 10);
 
-            setHistory(newHistory);
-            return newHistory;
+            setFavorites(newFavorites);
+            return newFavorites;
         },
         onSuccess: (newHistory) => {
             queryClient.setQueryData(["search-history"], newHistory);
