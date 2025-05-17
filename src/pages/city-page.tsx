@@ -1,3 +1,4 @@
+import { CurrentWeather } from "@/components/CurrentWeather";
 import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useForecastQuery, useWeatherQuery } from "@/hooks/use-weather";
@@ -33,7 +34,30 @@ const CityPage = () => {
   }
 
   return (
-    <div>CityPage</div>
+    <div className="space-y-4">
+      {/* Favorite Cities */}
+      <div className="flex items-center justify-between">
+        <h1 className="text-xl font-bold tracking-tight">My Location</h1>
+        
+      </div>
+
+      {/* Current and Hourly weather */}
+      <div className="grid gap-6">
+        <div className="flex flex-col lg:flex-row gap-4">
+          {/* current weather */}
+          <CurrentWeather data={weatherQuery.data}/>
+          {/* Hourly temperature */}
+          <HourlyTemperature data={forecastQuery.data}/>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 items-center">
+          {/* Details */}
+          <WeatherDetails data={weatherQuery.data}/>
+          {/* Forcast */}
+          <WeatherForcast data={forecastQuery.data} />
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -120,9 +120,7 @@ const WeatherDashboard = () => {
           {/* Forcast */}
           <WeatherForcast data={forecastQuery.data} />
         </div>
-
       </div>
-
     </div>
   );
 };
