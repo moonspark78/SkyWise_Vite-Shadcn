@@ -20,15 +20,16 @@ export function useFavorites() {
 
     const favoriteQuery = useQuery({
         queryKey: ["favorites"],
-        queryFn: () => history,
-        initialData: history,
+        queryFn: () => favorites,
+        initialData: favorites,
+        staleTime: Infinity,
     })
 
-    const addToHistory = useMutation({
+    const addToFavorite = useMutation({
         mutationFn: async(
-            search: Omit<SearchHistoryItem, "id" | "searchedAt">
+            search: Omit<FavoriteCity, "id" | "searchedAt">
         ) =>{
-            const newSearch: SearchHistoryItem = {
+            const newSearch: FavoriteCity = {
                 ...search,
                 id: `${search.lat}-${search.lon}-${Date.now()}`,
                 searchedAt: Date.now(),
