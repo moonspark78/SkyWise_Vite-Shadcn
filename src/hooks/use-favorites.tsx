@@ -2,25 +2,24 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useLocalStorage } from "./use-local-storage";
 
 
-interface SearchHistoryItem {
+interface FavoriteCity {
     id: string;
     name: string;
-    query: string;
     lat: number;
     lon: number;
     country: string;
     state?: string;
-    searchedAt: number;
+    addedAt: number;
 }
 
 
 export function useFavorites() {
-    const [history, setHistory] = useLocalStorage<SearchHistoryItem[]>("search-history", []);
+    const [favorites, setFavorites] = useLocalStorage<FavoriteCity[]>("favorites", []);
 
     const queryClient= useQueryClient();
 
-    const historyQuery = useQuery({
-        queryKey: ["search-history"],
+    const favoriteQuery = useQuery({
+        queryKey: ["favorites"],
         queryFn: () => history,
         initialData: history,
     })
