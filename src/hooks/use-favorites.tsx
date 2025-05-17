@@ -64,7 +64,7 @@ export function useFavorites() {
     })
 
     return {
-        history: historyQuery.data ?? [],
+        favorites: favoriteQuery.data,
         addToFavorite,
         removeFavorite,
     }
