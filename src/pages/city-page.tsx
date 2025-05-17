@@ -1,3 +1,4 @@
+import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { useForecastQuery, useWeatherQuery } from "@/hooks/use-weather";
 import { AlertTriangle } from "lucide-react";
@@ -26,6 +27,10 @@ const CityPage = () => {
       </AlertDescription>
     </Alert>
     )
+  }
+
+  if (!weatherQuery.data || !forecastQuery.data) {
+    return <WeatherSkeleton />;
   }
 
   return (

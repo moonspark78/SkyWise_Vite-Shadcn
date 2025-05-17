@@ -21,14 +21,14 @@ const WeatherDashboard = () => {
 
   const locationQuery = useReverseGeocodeQuery(coordinates);
   const weatherQuery = useWeatherQuery(coordinates);
-  const forcastQuery = useForecastQuery(coordinates);
+  const forecastQuery = useForecastQuery(coordinates);
   
 
   const handleRefresh = () => {
     getLocation();
     if (coordinates) {
       weatherQuery.refetch();
-      forcastQuery.refetch();
+      forecastQuery.refetch();
       locationQuery.refetch();
     }
   };
@@ -70,7 +70,7 @@ const WeatherDashboard = () => {
 
   const locationName= locationQuery.data?.[0];
 
-  if(weatherQuery.error || forcastQuery.error){
+  if(weatherQuery.error || forecastQuery.error){
     return(
       <Alert variant="destructive">
       <AlertTriangle className="h-4 w-4" />
@@ -86,7 +86,7 @@ const WeatherDashboard = () => {
     )
   }
 
-  if (!weatherQuery.data || !forcastQuery.data) {
+  if (!weatherQuery.data || !forecastQuery.data) {
     return <WeatherSkeleton />;
   }
 
@@ -99,7 +99,7 @@ const WeatherDashboard = () => {
           variant={"outline"}
           size={"icon"}
           onClick={handleRefresh}
-          disabled={weatherQuery.isFetching || forcastQuery.isFetching}
+          disabled={weatherQuery.isFetching || forecastQuery.isFetching}
         >
           <RefreshCcw className={`h-4 w-4 ${weatherQuery.isFetching? "animate-spin" : ""}`}/>
         </Button>
@@ -111,14 +111,14 @@ const WeatherDashboard = () => {
           {/* current weather */}
           <CurrentWeather data={weatherQuery.data} locationName={locationName}/>
           {/* Hourly temperature */}
-          <HourlyTemperature data={forcastQuery.data}/>
+          <HourlyTemperature data={forecastQuery.data}/>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 items-center">
           {/* Details */}
           <WeatherDetails data={weatherQuery.data}/>
           {/* Forcast */}
-          <WeatherForcast data={forcastQuery.data} />
+          <WeatherForcast data={forecastQuery.data} />
         </div>
 
       </div>
