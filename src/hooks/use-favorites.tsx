@@ -36,14 +36,17 @@ export function useFavorites() {
             };
 
             const exists = favorites.some((fav) => fav.id === newFavorite.id);
+            if (exists) return favorites;
 
-            const newFavorites = [...favorites, ...newFavorite].slice(0, 10);
+            const newFavorites = [...favorites, newFavorite].slice(0, 10);
 
             setFavorites(newFavorites);
             return newFavorites;
         },
-        onSuccess: (newHistory) => {
-            queryClient.setQueryData(["search-history"], newHistory);
+        onSuccess: () => {
+            queryClient.invalidateQueries({
+                queryKey: ["favorites"],
+            })
         },
     });
 
