@@ -67,5 +67,7 @@ export function useFavorites() {
         favorites: favoriteQuery.data,
         addFavorite,
         removeFavorite,
+        isFavorite:(lat:number, lon:number) => 
+            favorites.some((city) => city.lat === lat && city.lon === lon),
     }
 }
