@@ -16,6 +16,7 @@ const FavoriteButton = ({data}: FavoriteButtonProps) => {
     <Button
         variant={isCurrentlyFavorite ? "destructive" : "default"}
         size={"icon"}
+        className={isCurrentlyFavorite ? "bg-yellow-500 hover:bg-yellow-600" : "" }
     >
 
     </Button>
