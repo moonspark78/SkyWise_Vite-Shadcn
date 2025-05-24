@@ -25,7 +25,7 @@ export function useFavorites() {
         staleTime: Infinity,
     })
 
-    const addToFavorite = useMutation({
+    const addFavorite = useMutation({
         mutationFn: async(
             city: Omit<FavoriteCity, "id" | "addedAt">
         ) =>{
@@ -65,7 +65,7 @@ export function useFavorites() {
 
     return {
         favorites: favoriteQuery.data,
-        addToFavorite,
+        addFavorite,
         removeFavorite,
     }
 }
