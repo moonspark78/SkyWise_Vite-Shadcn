@@ -1,6 +1,7 @@
 import { WeatherData } from "@/api/types"
 import { useFavorites } from "@/hooks/use-favorites";
 import { Button } from "./ui/button";
+import { Star } from "lucide-react";
 
 
 interface FavoriteButtonProps {
@@ -18,6 +19,9 @@ const FavoriteButton = ({data}: FavoriteButtonProps) => {
         size={"icon"}
         className={isCurrentlyFavorite ? "bg-yellow-500 hover:bg-yellow-600" : "" }
     >
+        <Star  
+            className={`h-4 w-4 ${isCurrentlyFavorite ? " fill-current" : "" }`}
+        />
 
     </Button>
   )
