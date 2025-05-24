@@ -1,4 +1,6 @@
 import { WeatherData } from "@/api/types"
+import { useFavorites } from "@/hooks/use-favorites";
+import { Button } from "./ui/button";
 
 
 interface FavoriteButtonProps {
@@ -11,7 +13,12 @@ const FavoriteButton = ({data}: FavoriteButtonProps) => {
 
     
   return (
-    <div>favorite-button</div>
+    <Button
+        variant={isCurrentlyFavorite ? "destructive" : "default"}
+        size={"icon"}
+    >
+
+    </Button>
   )
 }
 
