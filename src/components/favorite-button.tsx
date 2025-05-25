@@ -12,6 +12,13 @@ const FavoriteButton = ({data}: FavoriteButtonProps) => {
     const { addFavorite, removeFavorite, isFavorite } = useFavorites();
     const isCurrentlyFavorite = isFavorite(data.coord.lat, data.coord.lon);
 
+
+    const handleToggleFavorite = () => {
+        if (isCurrentlyFavorite) {
+            removeFavorite.mutate(`${data.coord.lat}-${data.coord.lon}`);
+        }
+    };
+
     
   return (
     <Button
