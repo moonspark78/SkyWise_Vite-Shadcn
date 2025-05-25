@@ -16,6 +16,7 @@ const FavoriteButton = ({data}: FavoriteButtonProps) => {
     const handleToggleFavorite = () => {
         if (isCurrentlyFavorite) {
             removeFavorite.mutate(`${data.coord.lat}-${data.coord.lon}`);
+            toast.error(`Removed ${data.name} from favorites`);
         }
     };
 
