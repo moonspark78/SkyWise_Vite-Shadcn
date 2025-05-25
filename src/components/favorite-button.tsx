@@ -18,6 +18,14 @@ const FavoriteButton = ({data}: FavoriteButtonProps) => {
         if (isCurrentlyFavorite) {
             removeFavorite.mutate(`${data.coord.lat}-${data.coord.lon}`);
             toast.error(`Removed ${data.name} from favorites`);
+        }else{
+            addFavorite.mutate({
+                name: data.name,
+                lat: data.coord.lat,
+                lon: data.coord.lon,
+                country: data.sys.country,
+            });
+            toast.success(`Added ${data.name} to favorites`);
         }
     };
 
