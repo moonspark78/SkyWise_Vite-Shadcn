@@ -1,6 +1,7 @@
 import { useFavorites } from "@/hooks/use-favorites";
 import { ScrollArea } from "./ui/scroll-area";
 import { useNavigate } from "react-router-dom";
+import { useWeatherQuery } from "@/hooks/use-weather";
 
 interface FavoriteCityTabletProps{
     id: string;
@@ -31,6 +32,7 @@ const FavoriteCities = () => {
 
 function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletProps) {
    const navigate = useNavigate();
+   const { data: weather, isLoading } = useWeatherQuery({lat, lon});
 }
 
 export default FavoriteCities
