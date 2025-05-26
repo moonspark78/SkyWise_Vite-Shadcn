@@ -11,7 +11,11 @@ const FavoriteCities = () => {
   return (
     <>
         <h1 className="text-xl font-bold tracking-tight">Favorites</h1>
-        <ScrollArea className="w-full pb-4"></ScrollArea>
+        <ScrollArea className="w-full pb-4">
+            <div className="flex gap-4">
+
+            </div>
+        </ScrollArea>
     </>
   )
 }
