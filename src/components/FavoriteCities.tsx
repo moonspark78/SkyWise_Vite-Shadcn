@@ -1,6 +1,14 @@
 import { useFavorites } from "@/hooks/use-favorites";
 import { ScrollArea } from "./ui/scroll-area";
 
+interface FavoriteCityTabletProps{
+    id: string;
+    name: string;
+    lat: number;
+    lon: number;
+    onRemove: (id: string) => void;
+}
+
 
 const FavoriteCities = () => {
     const {favorites, removeFavorite} = useFavorites();
