@@ -20,4 +20,6 @@ const FavoriteCities = () => {
   )
 }
 
+function FavoriteCityTablet({id, name, lat, lon, onRemove}) {}
+
 export default FavoriteCities
