@@ -1,5 +1,6 @@
 import { useFavorites } from "@/hooks/use-favorites";
 import { ScrollArea } from "./ui/scroll-area";
+import { useNavigate } from "react-router-dom";
 
 interface FavoriteCityTabletProps{
     id: string;
@@ -28,6 +29,8 @@ const FavoriteCities = () => {
   )
 }
 
-function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletProps) {}
+function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletProps) {
+   const navigate = useNavigate();
+}
 
 export default FavoriteCities
