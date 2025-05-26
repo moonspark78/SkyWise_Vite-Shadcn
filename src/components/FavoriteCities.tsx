@@ -33,6 +33,10 @@ const FavoriteCities = () => {
 function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletProps) {
    const navigate = useNavigate();
    const { data: weather, isLoading } = useWeatherQuery({lat, lon});
+
+   return (
+    <div></div>
+   );
 }
 
 export default FavoriteCities
