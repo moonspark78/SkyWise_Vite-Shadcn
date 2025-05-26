@@ -1,5 +1,6 @@
 
 import { CurrentWeather } from "@/components/CurrentWeather";
+import FavoriteCities from "@/components/FavoriteCities";
 import HourlyTemperature from "@/components/hourly-temperature";
 import WeatherSkeleton from "@/components/loading-skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
