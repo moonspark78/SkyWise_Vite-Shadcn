@@ -3,8 +3,14 @@ import { useFavorites } from "@/hooks/use-favorites";
 
 const FavoriteCities = () => {
     const {favorites, removeFavorite} = useFavorites();
+    if(!favorites.length){
+        return null
+    }
+
   return (
-    <div>FavoriteCities</div>
+    <>
+        <h1 className="text-xl font-bold tracking-tight">Favorites</h1>
+    </>
   )
 }
 
