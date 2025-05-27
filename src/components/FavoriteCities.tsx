@@ -38,6 +38,8 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
     <div 
         onClick={() => navigate(`/city/${name}?lat=${lat}&lon=${lon}`)}
         role="button"
+        tabIndex={0}
+        className="relative flex min-w-[250px]"
     >
 
     </div>
