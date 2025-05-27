@@ -39,7 +39,7 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
         onClick={() => navigate(`/city/${name}?lat=${lat}&lon=${lon}`)}
         role="button"
         tabIndex={0}
-        className="relative flex min-w-[250px] cursor-pointer items-center gap-3 rounded-lg border bg-card"
+        className="relative flex min-w-[250px] cursor-pointer items-center gap-3 rounded-lg border bg-card p-4 pr-8 shadow-sm transition-all"
     >
 
     </div>
