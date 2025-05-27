@@ -25,9 +25,13 @@ const FavoriteCities = () => {
         <h1 className="text-xl font-bold tracking-tight">Favorites</h1>
         <ScrollArea className="w-full pb-4">
             <div className="flex gap-4">
-                {favorites.map(() =>{
+                {favorites.map((city) =>{
                     return(
-                        <FavoriteCityTablet/>
+                        <FavoriteCityTablet
+                            key={city.id}
+                            {...city}
+                            onRemove={() => removeFavorite.mutate(city.id)}
+                        />
                     )
                 })}
             </div>
