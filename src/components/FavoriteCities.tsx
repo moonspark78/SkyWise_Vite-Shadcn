@@ -2,6 +2,8 @@ import { useFavorites } from "@/hooks/use-favorites";
 import { ScrollArea } from "./ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 import { useWeatherQuery } from "@/hooks/use-weather";
+import { X } from "lucide-react";
+import { Button } from "./ui/button";
 
 interface FavoriteCityTabletProps{
     id: string;
@@ -42,6 +44,9 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
         className="relative flex min-w-[250px] cursor-pointer items-center gap-3 rounded-lg border bg-card p-4 pr-8 shadow-sm transition-all
         hover:shadow-md"
     >
+        <Button>
+            <X className="h-4 w-4"/>
+        </Button>
 
     </div>
    );
