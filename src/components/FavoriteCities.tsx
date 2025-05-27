@@ -35,7 +35,12 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
    const { data: weather, isLoading } = useWeatherQuery({lat, lon});
 
    return (
-    <div onClick={() => navigate(`/city/${name}?lat=${lat}&lon=${lon}`)}></div>
+    <div 
+        onClick={() => navigate(`/city/${name}?lat=${lat}&lon=${lon}`)}
+        role="button"
+    >
+
+    </div>
    );
 }
 
