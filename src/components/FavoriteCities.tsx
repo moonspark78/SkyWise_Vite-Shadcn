@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useWeatherQuery } from "@/hooks/use-weather";
 import { X } from "lucide-react";
 import { Button } from "./ui/button";
+import { toast } from "sonner";
 
 interface FavoriteCityTabletProps{
     id: string;
@@ -59,6 +60,7 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
             onClick={(e) => {
                 e.stopPropagation();
                 onRemove(id);
+                toast.error(`Removed ${name} from favorites`);
             }}
         >
             <X className="h-4 w-4"/>
