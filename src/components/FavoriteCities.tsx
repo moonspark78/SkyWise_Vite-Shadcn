@@ -55,6 +55,7 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
         <Button
             variant="ghost"
             size="icon"
+            className="absolute right-1 top-1 h-6 w-6 rounded-full p-0 hover:text-destructive-foreground group-hover:opacity-100"
         >
             <X className="h-4 w-4"/>
         </Button>
