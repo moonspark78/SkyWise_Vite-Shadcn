@@ -66,6 +66,16 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
             <X className="h-4 w-4"/>
         </Button>
 
+        {isLoading ? (
+            <div>
+
+            </div>
+        ) : weather ? (
+            <>
+                <div></div>
+                <div></div>
+            </>
+        ) : null}
     </div>
    );
 }
