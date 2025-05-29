@@ -2,7 +2,7 @@ import { useFavorites } from "@/hooks/use-favorites";
 import { ScrollArea } from "./ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 import { useWeatherQuery } from "@/hooks/use-weather";
-import { X } from "lucide-react";
+import { Loader2, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { toast } from "sonner";
 
@@ -67,8 +67,8 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
         </Button>
 
         {isLoading ? (
-            <div>
-
+            <div className="flex h-8 items-center justify-center">
+                <Loader2 className="h-4 w-4 animate-spin" />
             </div>
         ) : weather ? (
             <>
