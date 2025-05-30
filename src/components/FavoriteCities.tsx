@@ -75,7 +75,7 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
                 <div>
                     <img 
                         src="" 
-                        alt=""
+                        alt={`${weather.weather[0].description}`}
                         className="h-8 w-8"
                     />
                 </div>
