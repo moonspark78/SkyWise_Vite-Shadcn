@@ -72,7 +72,13 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
             </div>
         ) : weather ? (
             <>
-                <div></div>
+                <div>
+                    <img 
+                        src="" 
+                        alt=""
+                        className="h-8 w-8"
+                    />
+                </div>
                 <div></div>
             </>
         ) : null}
