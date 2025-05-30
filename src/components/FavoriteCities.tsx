@@ -72,7 +72,7 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
             </div>
         ) : weather ? (
             <>
-                <div>
+                <div className="flex items-center gap-2">
                     <img 
                         src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} 
                         alt={`${weather.weather[0].description}`}
