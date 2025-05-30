@@ -74,10 +74,14 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
             <>
                 <div>
                     <img 
-                        src="" 
+                        src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} 
                         alt={`${weather.weather[0].description}`}
                         className="h-8 w-8"
                     />
+                    <div>
+                        <p></p>
+                        <p className="text-xs text-muted-foreground">{weather.sys.country}</p>
+                    </div>
                 </div>
                 <div></div>
             </>
