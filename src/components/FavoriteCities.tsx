@@ -85,7 +85,7 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
                 </div>
                 <div>
                     <p className="text-xl font-bold">{Math.round(weather.main.temp)}°</p>
-                    <p></p>
+                    <p className="text-xs capitalize text-muted-foreground">{weather.weather[0].description}</p>
                 </div>
             </>
         ) : null}
