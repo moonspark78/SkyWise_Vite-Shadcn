@@ -79,7 +79,7 @@ function FavoriteCityTablet({id, name, lat, lon, onRemove}: FavoriteCityTabletPr
                         className="h-8 w-8"
                     />
                     <div>
-                        <p></p>
+                        <p className="font-medium">{name}</p>
                         <p className="text-xs text-muted-foreground">{weather.sys.country}</p>
                     </div>
                 </div>
