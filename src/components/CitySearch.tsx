@@ -57,8 +57,8 @@ const CitySearch = () => {
           )}
 
           {favorites.length > 0 && (
-            <>
-            <CommandSeparator/>
+            
+            
             <CommandGroup>
               <div className="flex items-center justify-between px-2 my-2">
                 <p className="text-xs text-muted-foreground">Recent Searches</p>
@@ -88,14 +88,10 @@ const CitySearch = () => {
                     <span className="text-sm text-muted-foreground">
                       , {location.country}
                     </span>
-                    <span>
-                      {format(location.searchedAt, "MMM d, h:mm a")}
-                    </span>
                   </CommandItem>
                  )
               })}
             </CommandGroup>
-            </>
           )}
           
 
@@ -132,7 +128,7 @@ const CitySearch = () => {
                     <span className="text-sm text-muted-foreground">
                       , {location.country}
                     </span>
-                    <span>
+                    <span className="ml-auto text-xs text-muted-foreground">
                       {format(location.searchedAt, "MMM d, h:mm a")}
                     </span>
                   </CommandItem>
