@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "./ui/command";
-import { Clock, Loader2, Search, XCircle } from "lucide-react";
+import { Clock, Loader2, Search, Star, XCircle } from "lucide-react";
 import { useSearchLocations } from "@/hooks/use-weather";
 import { useNavigate } from "react-router-dom";
 import { useSearchHistory } from "@/hooks/use-search-history";
@@ -61,11 +61,11 @@ const CitySearch = () => {
               {favorites.map((location) => {
                  return (
                   <CommandItem
-                    key={`${location.lat}-${location.lon}`}
+                    key={location.id}
                     value={`${location.lat}|${location.lon}|${location.name}|${location.country}`}
                     onSelect={handleSelect}
                   >
-                    <Clock className="mr-2 h-4 w-4 text-muted-foreground"/>
+                    <Star className="mr-2 h-4 w-4 text-yellow-500"/>
                     <span>{location.name}</span>
                     {location.state && (
                       <span className="text-sm text-muted-foreground">
