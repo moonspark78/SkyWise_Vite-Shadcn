@@ -60,17 +60,6 @@ const CitySearch = () => {
             
             
             <CommandGroup>
-              <div className="flex items-center justify-between px-2 my-2">
-                <p className="text-xs text-muted-foreground">Recent Searches</p>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => clearHistory.mutate()}
-                >
-                  <XCircle className="h-4 w-4"/>
-                  Clear
-                </Button>
-              </div>
               {history.map((location) => {
                  return (
                   <CommandItem
