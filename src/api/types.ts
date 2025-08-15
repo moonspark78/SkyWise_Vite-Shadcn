@@ -60,4 +60,5 @@ export interface GeocodingResponse {
   is_capital: boolean;
   population?: number;
   timezone: string;
+  elevation?: number;
 }
