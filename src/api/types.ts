@@ -61,4 +61,5 @@ export interface GeocodingResponse {
   population?: number;
   timezone: string;
   elevation?: number;
+  post_code?: string;
 }
