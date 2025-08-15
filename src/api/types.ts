@@ -58,4 +58,5 @@ export interface GeocodingResponse {
   country: string;
   state?: string;
   is_capital: boolean;
+  population?: number;
 }
