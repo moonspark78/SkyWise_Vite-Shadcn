@@ -57,4 +57,5 @@ export interface GeocodingResponse {
   lon: number;
   country: string;
   state?: string;
+  is_capital: boolean;
 }
