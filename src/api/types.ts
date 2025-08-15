@@ -59,4 +59,5 @@ export interface GeocodingResponse {
   state?: string;
   is_capital: boolean;
   population?: number;
+  timezone: string;
 }
