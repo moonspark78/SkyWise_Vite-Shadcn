@@ -47,6 +47,7 @@ export interface ForecastData {
       country: string;
       sunrise: number;
       sunset: number;
+      timezone: number;
     };
 }
 
