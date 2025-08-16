@@ -63,4 +63,5 @@ export interface GeocodingResponse {
   elevation?: number;
   post_code?: string;
   area?: number;
+  country_code: string;
 }
