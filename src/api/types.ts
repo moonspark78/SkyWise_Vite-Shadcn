@@ -62,4 +62,5 @@ export interface GeocodingResponse {
   timezone: string;
   elevation?: number;
   post_code?: string;
+  area?: number;
 }
