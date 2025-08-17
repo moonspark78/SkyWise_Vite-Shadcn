@@ -49,6 +49,7 @@ export interface ForecastData {
       sunset: number;
       timezone: number;
       coord: Coordinates;
+      population?: number;
     };
 }
 
