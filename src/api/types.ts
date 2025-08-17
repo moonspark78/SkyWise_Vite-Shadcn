@@ -52,6 +52,8 @@ export interface ForecastData {
       population?: number;
       area?: number;
       elevation?: number;
+      post_code?: string;
+      timezone_name?: string;
     };
 }
 
