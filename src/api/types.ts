@@ -51,6 +51,7 @@ export interface ForecastData {
       coord: Coordinates;
       population?: number;
       area?: number;
+      elevation?: number;
     };
 }
 
