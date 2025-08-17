@@ -50,6 +50,7 @@ export interface ForecastData {
       timezone: number;
       coord: Coordinates;
       population?: number;
+      area?: number;
     };
 }
 
