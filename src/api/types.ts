@@ -33,6 +33,7 @@ export interface WeatherData {
       sunrise: number;
       sunset: number;
       country: string;
+      id?: number;
     };
     name: string;
     dt: number;
