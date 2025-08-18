@@ -21,6 +21,7 @@ export interface WeatherData {
       temp_max: number;
       pressure: number;
       humidity: number;
+      sea_level?: number;
     };
     wind: {
       speed: number;
