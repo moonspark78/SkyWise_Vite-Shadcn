@@ -36,6 +36,7 @@ export interface WeatherData {
       id?: number;
       type?: number;
       message?: number;
+      visibility?: number; // Optional, used in some APIs
     };
     name: string;
     dt: number;
