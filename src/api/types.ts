@@ -35,6 +35,7 @@ export interface WeatherData {
       country: string;
       id?: number;
       type?: number;
+      message?: number;
     };
     name: string;
     dt: number;
