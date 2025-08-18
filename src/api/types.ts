@@ -55,6 +55,7 @@ export interface ForecastData {
       post_code?: string;
       timezone_name?: string;
       country_code?: string;
+      state?: string; 
     };
 }
 
