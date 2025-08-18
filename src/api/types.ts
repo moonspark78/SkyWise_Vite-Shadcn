@@ -56,6 +56,7 @@ export interface ForecastData {
       timezone_name?: string;
       country_code?: string;
       state?: string; 
+      is_capital?: boolean;
     };
 }
 
