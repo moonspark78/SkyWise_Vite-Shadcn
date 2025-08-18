@@ -23,6 +23,7 @@ export interface WeatherData {
       humidity: number;
       sea_level?: number;
       grnd_level?: number;
+      temp_kf?: number; // Optional, used in some APIs
     };
     wind: {
       speed: number;
