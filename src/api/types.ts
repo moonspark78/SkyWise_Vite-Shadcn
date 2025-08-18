@@ -34,6 +34,7 @@ export interface WeatherData {
       sunset: number;
       country: string;
       id?: number;
+      type?: number;
     };
     name: string;
     dt: number;
