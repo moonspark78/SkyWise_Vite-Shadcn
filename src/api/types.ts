@@ -40,6 +40,7 @@ export interface WeatherData {
     };
     name: string;
     dt: number;
+    timezone: number;
 }
   
 export interface ForecastData {
@@ -50,6 +51,7 @@ export interface ForecastData {
       wind: WeatherData["wind"];
       dt_txt: string;
       sys?: Partial<WeatherData["sys"]>;
+      
     }>;
     city: {
       name: string;
