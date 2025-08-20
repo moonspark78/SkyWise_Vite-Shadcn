@@ -49,7 +49,7 @@ export interface ForecastData {
       weather: WeatherData["weather"];
       wind: WeatherData["wind"];
       dt_txt: string;
-      visibility?: number; // Optional, used in some APIs
+      sys?: Partial<WeatherData["sys"]>;
     }>;
     city: {
       name: string;
