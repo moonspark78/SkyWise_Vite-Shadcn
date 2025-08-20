@@ -43,6 +43,7 @@ export interface WeatherData {
     name: string;
     dt: number;
     id: number;
+    base: string;
     timezone: number;
     visibility?: number; // Optional, used in some APIs
     clouds?: {
