@@ -41,6 +41,7 @@ export interface WeatherData {
     name: string;
     dt: number;
     timezone: number;
+    visibility?: number; // Optional, used in some APIs
 }
   
 export interface ForecastData {
