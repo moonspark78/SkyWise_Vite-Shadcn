@@ -45,6 +45,10 @@ export interface WeatherData {
     clouds?: {
       all: number;
     };
+    rain?: {
+      '1h'?: number; // Rain volume for the last 1 hour
+      '3h'?: number; // Rain volume for the last 3 hours
+    };
 }
   
 export interface ForecastData {
