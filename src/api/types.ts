@@ -44,6 +44,7 @@ export interface WeatherData {
     dt: number;
     id: number;
     base: string;
+    cod: number;
     timezone: number;
     visibility?: number; // Optional, used in some APIs
     clouds?: {
