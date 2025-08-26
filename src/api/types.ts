@@ -12,6 +12,7 @@ export interface WeatherCondition{
     icon_url_2x?: string;
     icon_url_4x?: string;
     icon_url_10x?: string;
+    icon_url_animated?: string;
 }
 
 export interface WeatherData {
