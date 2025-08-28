@@ -56,6 +56,7 @@ export interface WeatherData {
     visibility?: number; // Optional, used in some APIs
     clouds?: {
       all: number;
+      visibility?: number; // Optional, used in some APIs
     };
     rain?: {
       '1h'?: number; // Rain volume for the last 1 hour
