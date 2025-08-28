@@ -16,12 +16,12 @@ export interface WeatherCondition{
     icon_url_animated_2x?: string;
     icon_url_animated_4x?: string;
     icon_url_animated_10x?: string;
+    custom_icon?: string;
 }
 
 export interface WeatherData {
     coord: Coordinates;
     weather: WeatherCondition[];
-    base: string;
     main: {
       temp: number;
       feels_like: number;
