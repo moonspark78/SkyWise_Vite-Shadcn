@@ -21,6 +21,7 @@ export interface WeatherCondition{
 export interface WeatherData {
     coord: Coordinates;
     weather: WeatherCondition[];
+    base: string;
     main: {
       temp: number;
       feels_like: number;
