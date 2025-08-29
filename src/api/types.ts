@@ -45,6 +45,7 @@ export interface WeatherData {
       speed: number;
       deg: number;
       gust?: number;
+      var_beg?: number; // Optional, used in some APIs
     };
     sys: {
       sunrise: number;
