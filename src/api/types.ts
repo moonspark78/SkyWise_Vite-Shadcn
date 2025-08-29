@@ -3,6 +3,7 @@ export interface Coordinates{
     lon: number;
     name?: string;
     country?: string;
+    state?: string;
 }
 
 export interface WeatherCondition{
