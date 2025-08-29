@@ -1,6 +1,7 @@
 export interface Coordinates{
     lat: number;
     lon: number;
+    name?: string;
 }
 
 export interface WeatherCondition{
