@@ -4,6 +4,8 @@ export interface Coordinates{
     name?: string;
     country?: string;
     state?: string;
+    is_capital?: boolean;
+    population?: number;
 }
 
 export interface WeatherCondition{
