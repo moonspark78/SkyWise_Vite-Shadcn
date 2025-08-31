@@ -57,6 +57,8 @@ export interface WeatherData {
       visibility?: number; // Optional, used in some APIs
       pod?: string; // Optional, used in some APIs
       timezone?: number; // Optional, used in some APIs
+      sunrise_ts?: number; // Optional, used in some APIs
+      sunset_ts?: number; // Optional, used in some APIs
     };
     name: string;
     dt: number;
