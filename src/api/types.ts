@@ -74,6 +74,7 @@ export interface WeatherData {
       pop?: number; // Optional, used in some APIs
       uvi?: number; // Optional, used in some APIs
       gust?: number; // Optional, used in some APIs
+      dew_point?: number; // Optional, used in some APIs
     };
     rain?: {
       '1h'?: number; // Rain volume for the last 1 hour
