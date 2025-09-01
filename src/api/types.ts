@@ -1,3 +1,4 @@
+
 export interface Coordinates{
     lat: number;
     lon: number;
@@ -25,6 +26,7 @@ export interface WeatherCondition{
     custom_icon_2x?: string;
     custom_icon_4x?: string;
     custom_icon_10x?: string;
+    custom_icon_animated?: string;
 }
 
 export interface WeatherData {
