@@ -59,7 +59,8 @@ export interface WeatherData {
       timezone?: number; // Optional, used in some APIs
       sunrise_ts?: number; // Optional, used in some APIs
       sunset_ts?: number; // Optional, used in some APIs
-      
+      moonrise?: number; // Optional, used in some APIs
+      moonset?: number; // Optional, used in some APIs
     };
     name: string;
     dt: number; 
