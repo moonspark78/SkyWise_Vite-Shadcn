@@ -59,6 +59,8 @@ export interface WeatherData {
       gust_var_end?: number; // Optional, used in some APIs
       deg_var_beg?: number; // Optional, used in some APIs
       deg_var_end?: number; // Optional, used in some APIs
+      speed_var_beg?: number; // Optional, used in some APIs
+      speed_var_end?: number;
     };
     sys: {
       sunrise: number;
