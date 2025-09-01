@@ -45,6 +45,7 @@ export interface WeatherData {
       temp_kf?: number; // Optional, used in some APIs
       aqi?: number; // Optional, used in some APIs
       air_quality_index?: number; // Optional, used in some APIs
+      uv_index?: number; // Optional, used in some APIs
     };
     wind: {
       speed: number;
