@@ -27,6 +27,7 @@ export interface WeatherCondition{
     custom_icon_4x?: string;
     custom_icon_10x?: string;
     custom_icon_animated?: string;
+
 }
 
 export interface WeatherData {
@@ -42,6 +43,7 @@ export interface WeatherData {
       sea_level?: number;
       grnd_level?: number;
       temp_kf?: number; // Optional, used in some APIs
+      aqi?: number; // Optional, used in some APIs
     };
     wind: {
       speed: number;
