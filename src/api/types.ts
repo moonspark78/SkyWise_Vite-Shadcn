@@ -62,6 +62,7 @@ export interface WeatherData {
       speed_var_beg?: number; // Optional, used in some APIs
       speed_var_end?: number;
       chill?: number; // Optional, used in some APIs
+      direction?: string; // Optional, used in some APIs
     };
     sys: {
       sunrise: number;
