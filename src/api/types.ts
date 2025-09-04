@@ -65,6 +65,7 @@ export interface WeatherData {
       direction?: string; // Optional, used in some APIs
       direction_deg?: number; // Optional, used in some APIs
       direction_deg_var_beg?: number; // Optional, used in some APIs
+      direction_deg_var_end?: number; // Optional, used in some APIs
     };
     sys: {
       sunrise: number;
