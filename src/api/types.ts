@@ -82,6 +82,7 @@ export interface WeatherData {
       moonrise?: number; // Optional, used in some APIs
       moonset?: number; // Optional, used in some APIs
       moon_phase?: number; // Optional, used in some APIs
+      moon_illumination?: number; // Optional, used in some APIs
     };
     name: string;
     dt: number; 
