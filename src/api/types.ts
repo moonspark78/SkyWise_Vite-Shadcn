@@ -93,6 +93,7 @@ export interface WeatherData {
     cod: number;
     timezone: number;
     visibility?: number; // Optional, used in some APIs
+    pop?: number; // Optional, used in some APIs
     clouds?: {
       all: number;
       visibility?: number; // Optional, used in some APIs
